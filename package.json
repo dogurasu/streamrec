@@ -1,0 +1,19 @@
+{
+  "name": "streamrec",
+  "version": "1.0.0",
+  "description": "a web app that recommends Twitch channels",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogurasu/streamrec.git"
+  },
+  "author": "Douglas Park",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dogurasu/streamrec/issues"
+  },
+  "homepage": "https://github.com/dogurasu/streamrec#readme"
+}
