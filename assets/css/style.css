@@ -1,7 +1,30 @@
+/* CSS Variables */
+:root {
+  --main-font: 'Roboto', sans-serif;
+  --about-font: 'Martel', serif;
+}
+
+/* Mobile */
+
+/* Responsive Section */
+
+/* Buttons */
+
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Header */
+#header-top {
+  font-family: var(--main-font);
+}
+
+/* About */
+#about {
+  font-family: var(--about-font);
 }
 
 .graphic {
