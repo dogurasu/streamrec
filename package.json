@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/dogurasu/streamrec/issues"
   },
-  "homepage": "https://github.com/dogurasu/streamrec#readme"
+  "homepage": "https://github.com/dogurasu/streamrec#readme",
+  "dependencies": {
+    "animejs": "^3.1.0",
+    "dotenv": "^8.2.0"
+  }
 }
