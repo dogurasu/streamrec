@@ -3,12 +3,19 @@ let clientID = config.API_KEY;
 let streamInfo = {};
 
 document.querySelector(".get-started-button").addEventListener('click', getStarted);
+let mainContent = document.querySelector("#get-started");
 
 // function for getting started
 function getStarted() {
+  clearMain();
   getStreamInfo();
   setTimeout( () => console.log(streamInfo), 1000);
   traverseStreamInfo();
+}
+
+const clearMain = () => {
+  
+  // console.log(mainContent);
 }
 
 // call Twitch API
