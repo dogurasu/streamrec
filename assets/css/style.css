@@ -98,13 +98,17 @@
   font-size: 38px;
 }
 
+.branding-container .logo.major {
+  margin-right: 20px;
+}
+
 .get-started-button {
   font-weight: bold;
   font-size: 14px;
   width: 115px;
   height: 40px;
   border: none;
-  margin-top: 10px;
+  margin-top: 50px;
   border-radius: 50px;
   background-color: black;
   color: #FFFFFF;
@@ -167,14 +171,38 @@
 }
 
 /* Page Transition animations */
-
-/* Added Elements */
-#main-content .preference-box {
+#main-content-Pref {
+  font-family: var(--main-font);
+  width: 1000px;
+  height: 83.1vh;
+  border: thin solid black;
+  margin: auto;
+  padding-top: 120px;
   display: none;
-  width: 500px;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#main-content-Pref .preference-box {
+  display: none;
+  width: 300px;
+  height: 300px;
   box-shadow: 3px 3px 5px 2px #000;
   font-family: var(--about-font);
-  font-size: 2rem;
+  font-size: .8rem;
   padding: 5px 10px;
   /* border: thin solid black; */
+}
+
+#main-content .preference-box.box1 {
+
+}
+
+#main-content .preference-box.box2 {
+  
+}
+
+#main-content .preference-box.box3 {
+  
 }

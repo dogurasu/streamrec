@@ -14,7 +14,8 @@ fetch('./twitchScrape/tags.json')
   });
 
 document.querySelector(".get-started-button").addEventListener('click', getStarted);
-let replaceItems = [document.querySelector("#main-content .branding-container"), document.querySelector("#main-content .get-started-button")]
+let gsElems = [document.querySelector("#main-content .branding-container"), document.querySelector("#main-content .get-started-button")];
+let prefBoxes = [document.querySelector("#main-content-Pref .preference-box.box1"), document.querySelector("#main-content-Pref .preference-box.box2"), document.querySelector("#main-content-Pref .preference-box.box3")];
 
 function getStarted() {
   // Replace main-content with preference checkboxes
@@ -25,11 +26,15 @@ function getStarted() {
 }
 
 const clearMain = () => {
-  // clear the main-content area
-  for (i in replaceItems) {
-    replaceItems[i].style.display="none";
+  // set respective "display" attributes
+  for (i in gsElems) {
+    gsElems[i].style.display="none";
   }
-  // console.log(mainContent);
+  document.querySelector("#main-content").style.display="none";
+  document.querySelector("#main-content-Pref").style.display = "flex";
+  for (i in prefBoxes) {
+    prefBoxes[i].style.display="flex"
+  }
 }
 
 // call Twitch API
