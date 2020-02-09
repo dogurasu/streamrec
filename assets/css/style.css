@@ -167,3 +167,14 @@
 }
 
 /* Page Transition animations */
+
+/* Added Elements */
+#main-content .preference-box {
+  display: none;
+  width: 500px;
+  box-shadow: 3px 3px 5px 2px #000;
+  font-family: var(--about-font);
+  font-size: 2rem;
+  padding: 5px 10px;
+  /* border: thin solid black; */
+}
