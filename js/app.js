@@ -1,6 +1,14 @@
 // variables
 let clientID = config.API_KEY;
-let streams = {};
+let streams = [];
+// {
+//   "page0": "",
+//   "page1": "",
+//   "page2": "",
+//   "page3": "",
+//   "page4": "",
+// };
+let pageIndex = '';
 let tags = {};
 
 // get Tags JSON data
@@ -38,16 +46,35 @@ const clearMain = () => {
 }
 
 // call Twitch API
-const getStreamInfo = () => {  
-  fetch('https://api.twitch.tv/helix/streams?first=20', {
-    headers: {
-      'Client-ID': `${clientID}`
-    }
-    })
+const getStreamInfo = () => {
+  // let pNum = 0;
+  // let pageIndex = '';
+  let paginCursor = '';
+  let url = '';
+  let smollFunc = () => {
+    
+  }
+  for (let i = 0; i < 5; ++i) {
+    console.log(`Running for the ${i}th time`)
+    // pageIndex = `page${i}`;
+    
+    setTimeout( function() {
+      url = `https://api.twitch.tv/helix/streams?first=20&after=${paginCursor}`
+    }, 1000);
+    fetch(url, {
+      headers: {
+        'Client-ID': `${clientID}`
+      }
+      })
     .then(res => {
       return(res.json())
     })
-    .then(resJSON => streams=resJSON);
+    .then(resJSON => {
+      streams.push(resJSON.data);
+      paginCursor = resJSON.pagination.cursor;
+    });
+    // ++pNum;
+  }
 }
 
 // traverse returned JSON object
