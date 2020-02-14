@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!-- <!DOCTYPE html5>
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Sandbox</title>
         <link rel="stylesheet" type="text/css" href="sandbox.css">
-        <!-- Google Fonts -->
+        Google Fonts
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -17,7 +17,47 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra venenatis quam. Nam auctor, nibh quis vestibulum lacinia, erat nisl euismod est, ac condimentum metus sem eu felis. Aliquam id orci in tellus sodales pharetra. Donec eget justo rutrum justo vulputate rutrum at at justo. Donec nec mauris in sapien elementum rutrum sit amet lobortis odio. Pellentesque faucibus mattis massa sit amet fermentum. Sed sed tristique turpis, sed lacinia libero. 
                 </p>
             </div>
+            <button>Click me.</button>
         </div>
     <script src="sand.js"></script>
     </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+  </head>
+  <body>
+    <p>This is my page</p>
+    <script>
+        let myFetch = async () => {
+            let response = await fetch('coffee.jpg');
+            let myBlob = await response.blob();
+
+            let objectURL = URL.createObjectURL(myBlob);
+            let image = document.createElement('img');
+            image.src = objectURL;
+            document.body.appendChild(image);
+            return("yes");
+        }
+
+        let result;
+        myFetch()
+            .then(res => result = res);
+        console.log(result);
+
+        fetch('coffee.jpg')
+            .then(response => response.blob())
+            .then(myBlob => {
+                let objectURL = URL.createObjectURL(myBlob);
+                let image = document.createElement('img');
+                image.src = objectURL;
+                document.body.appendChild(image);
+            })
+            .catch(e => {
+                console.log('There has been a problem with your fetch operation: ' + e.message);
+        });
+    </script>
+  </body>
 </html>
