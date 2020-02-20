@@ -1,0 +1,73 @@
+Javascript
+
+// const fetchTwitch = async (url, paginCursor) => {
+//   let retData = {};
+//   let res = await fetch(url + paginCursor, {
+//     headers: {
+//       'Client-ID': `${clientID}`
+//     }
+//   })
+//   let resJSON = await res.json();
+//   // console.log(resJSON);
+//   resJSON.then( (res) => {
+//     paginCursor = resJSON.pagination.cursor;
+//     streams.push(resJSON.data);
+//   })
+  
+
+//   // console.log([resJSON.pagination.cursor, resJSON.data])
+//   // return [resJSON.pagination.cursor, resJSON.data];
+
+//   // let paginKey = resJSON.pagination.cursor;
+  
+//   // let paginKey = function(resJSON) {
+//   //   // streams.push(resJSON);
+//   //   retData = resJSON.data;
+//   //   console.log(resJSON);
+//   //   return resJSON.pagination.cursor;
+//   // }
+//   // return [paginKey, retData];
+// }
+
+
+// for (let i = 0; i < 3; ++i) {
+// boxes[i].innerHTML= `<div id="twitch-embed"></div>
+
+// <!-- Load the Twitch embed script -->
+// <script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+// <!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+// <script type="text/javascript">
+//   new Twitch.Embed("twitch-embed", {
+//     width: 854,
+//     height: 480,
+//     channel: "Trainwreckstv"
+//   });
+// </script>`
+// }
+
+// CSS
+
+// #main-content-PrefTest{
+//   font-family: var(--main-font);
+//   width: 1000px;
+//   height: 83.1vh;
+//   border: thin solid black;
+//   margin: auto;
+//   padding-top: 120px;
+//   display: flex;
+//   flex-direction: row;
+//   align-items: flex-start;
+//   justify-content: space-around;
+// }
+
+// #main-content-Pref .preference-box.box4 {
+//   display: flex;
+//   width: 300px;
+//   height: 300px;
+//   box-shadow: 3px 3px 5px 2px #000;
+//   font-family: var(--about-font);
+//   font-size: .8rem;
+//   padding: 5px 10px;
+//   border: thin solid black;
+// } 

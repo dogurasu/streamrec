@@ -145,10 +145,15 @@
   border-bottom: medium solid black;
 }
 
+.about-paragraph {
+  width: 540px;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
 .about-graphics {
   width: 500px;
   /* border: thin solid black; */
-  
 }
 
 .graphic {
@@ -175,7 +180,7 @@
   font-family: var(--main-font);
   width: 1000px;
   height: 83.1vh;
-  border: thin solid black;
+  /* border: thin solid black; */
   margin: auto;
   padding-top: 120px;
   display: none;
@@ -190,19 +195,27 @@
   height: 300px;
   box-shadow: 3px 3px 5px 2px #000;
   font-family: var(--about-font);
-  font-size: .8rem;
+  font-size: 1.3rem;
   padding: 5px 10px;
-  /* border: thin solid black; */
+  flex-flow: column nowrap;
+  justify-content: center;
 }
 
-#main-content .preference-box.box1 {
-
+#main-content-Pref .preference-box:hover {
+  cursor: pointer;
+  color: red;
 }
 
-#main-content .preference-box.box2 {
-  
+#main-content-Pref .preference-box .streamer-name {
+  text-decoration: none;
+  color: #9a78ff;
+  font-weight: bold;
+  font-size: 1.4rem;
 }
 
-#main-content .preference-box.box3 {
-  
+.tagsTitle {
+  font-size: 1.5rem;
+}
+.tagDesc {
+  font-size: 1.1rem;
 }
