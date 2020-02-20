@@ -39,14 +39,9 @@ function getStarted() {
 
 function boxSelected() {
   let boxNum = this.className[this.className.length-1]-1;
-  prefBoxes[boxNum].innerHTML= `<a href="https://www.twitch.tv/${channels[boxNum].name}" class="streamer-name" target="_blank">${channels[boxNum].name}</a>`; // <p class="tagDesc">${pString}</p> 
+  prefBoxes[boxNum].innerHTML= `<a href="https://www.twitch.tv/${channels[boxNum].name}" class="streamer-name" target="_blank">${channels[boxNum].name}</a>`; 
   // then change the name so that this function does not run again
   this.removeEventListener('click', boxSelected);
-  // boxes[i].innerHTML= `<h2 class="streamer-name">${}:</h2>
-  //    <p class="tagDesc">${pString}</p> `;
-  // for (let i = 0; i < 3; ++i) {
-  //  let pString = `${Object.keys(channels[i].tags[0])[0]}: ${Object.values(channels[i].tags[0])[0]}`;
-  // }
 }
 
 const listTags = () => {
