@@ -4,3 +4,5 @@ vect_img
 geckdriver.log
 discontinuedFunctions.js
 sandbox/
+.env
+js/config.js
